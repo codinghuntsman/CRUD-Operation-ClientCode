@@ -1,13 +1,14 @@
 import React from "react";
+import image from "../../../src/images/Student-Services.png";
 
 const Home = () => {
   return (
-    <div className=" bg-gray-200 w-full min-h-screen rounded-lg">
-      <div class="flex justify-center pt-20">
-        <div class="block p-6 rounded-lg shadow-xl bg-white max-w-sm">
-          <h5 class="text-gray-900 text-xl font-extrabold mb-2">CRUD OPERATION</h5>
-          <p class="text-gray-700 text-base font-bold mb-4">Lets go check the operation</p>
+    <div>
+      <div className="flex justify-center items-center flex-col">
+        <div className="mt-3">
+          <h1 className="font-serif font-bold text-sm md:text-2xl lg:text-4xl">Student Information With CRUD Operation</h1>
         </div>
+        <img className="w-[500px] h-[250px] lg:h-[350px]" src={image} alt="" />
       </div>
     </div>
   );
