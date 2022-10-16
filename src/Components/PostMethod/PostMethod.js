@@ -26,16 +26,16 @@ const PostMethod = () => {
   };
   return (
     <div>
-      <section className="h-full gradient-form bg-gray-200 md:h-screen">
+      <section className="h-full gradient-form bg-gray-300 md:h-screen">
         <div className="container py-12 px-6 h-full">
           <div className="flex justify-center flex-wrap h-full text-gray-800">
             <div className="xl:w-10/12">
-              <div className="block bg-white shadow-lg rounded-lg border border-indigo-500">
+              <div className="block bg-gray-200 shadow-lg rounded-lg border border-green-500">
                 <div className="lg:flex lg:flex-wrap g-0">
                   <div className="lg:w-6/12 px-4 md:px-0 mx-auto">
-                    <div className="md:p-12 md:mx-6">
+                    <p className="mb-4 text-sm lg:text-[43px] pt-5 pb-2 text-center lg:text-left font-extrabold tracking-widest">Insert Information</p>
+                    <div>
                       <form onSubmit={handleFormSubmit}>
-                        <p className="mb-4 text-center pt-5 font-extrabold">Submit Information</p>
                         <div className="mb-4">
                           <h1>Your name</h1>
                           <input
@@ -70,7 +70,7 @@ const PostMethod = () => {
                           />
                         </div>
                         <div className="text-center pt-1 mb-12 pb-1 text-white">
-                          <button className="w-full p-1 rounded-sm text-white bg-slate-600">Insert Info</button>
+                          <button className="w-full p-1 rounded-sm text-white bg-slate-600">Submit</button>
                         </div>
                       </form>
                     </div>

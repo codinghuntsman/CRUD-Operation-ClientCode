@@ -1,5 +1,6 @@
 // eslint-disable-next-line
 import React from "react";
+import image from "../../../src/images/my-img.png";
 
 const Navbar = () => {
   return (
@@ -60,39 +61,39 @@ const Navbar = () => {
       "
               href="/#"
             >
-              <h1>CRUD</h1>
+              <h1 className="font-bold tracking-wider text-indigo-500 text-xl information">CRUD</h1>
             </a>
             <ul className="navbar-nav flex flex-col pl-0 list-style-none mr-auto">
               <li className="nav-item p-2">
-                <a className="nav-link text-gray-500 hover:text-gray-700 focus:text-gray-700 p-0" href="/">
+                <a className="nav-link text-gray-500 hover:text-gray-700 underline hover:underline-offset-4 hover:decoration-4 focus:text-gray-700 p-0 information" href="/">
                   Home
                 </a>
               </li>
               <li className="nav-item p-2">
-                <a className="nav-link text-gray-500 hover:text-gray-700 focus:text-gray-700 p-0" href="/post">
+                <a className="nav-link text-gray-500 hover:text-gray-700 focus:text-gray-700 p-0 information" href="/post">
                   Insert Info
                 </a>
               </li>
               <li className="nav-item p-2">
-                <a className="nav-link text-gray-500 hover:text-gray-700 focus:text-gray-700 p-0" href="/user">
-                  All Users
+                <a className="nav-link text-gray-500 hover:text-gray-700 focus:text-gray-700 p-0 information" href="/user">
+                  All Student
                 </a>
               </li>
               <li className="nav-item p-2">
-                <a className="nav-link text-gray-500 hover:text-gray-700 focus:text-gray-700 p-0" href="/review">
-                  Review
+                <a className="nav-link text-gray-500 hover:text-gray-700 focus:text-gray-700 p-0 information" href="/review">
+                  All comment
                 </a>
               </li>
             </ul>
           </div>
 
           <div className="flex items-center relative">
-            <a className="mr-5" href="/#">
+            <a className="mr-5 information" href="/#">
               Contact
             </a>
             <div className="dropdown relative">
               <a className="dropdown-toggle flex items-center hidden-arrow" href="/#" id="dropdownMenuButton2" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                <img src="https://mdbootstrap.com/img/new/avatars/2.jpg" className="rounded-full" style={{ height: 25, widows: 25 }} alt="me" loading="lazy" />
+                <img src={image} className="rounded-full" style={{ height: 25, widows: 25 }} alt="me" loading="lazy" />
               </a>
               <ul
                 className="

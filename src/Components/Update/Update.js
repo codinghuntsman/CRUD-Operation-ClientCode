@@ -41,22 +41,22 @@ const Update = () => {
   return (
     <div>
       <section className="grid gap-x-3 grid-cols-1 md:grid-cols-2 lg:grid-cols-2 mx-3 md:mx-8 lg:mx-10 mt-2 md:mt-8 lg:mt-10 rounded-lg border border-indigo-500 bg-gray-200">
-        <div className="flex justify-center items-center">
+        <div className="flex justify-center items-center pt-2 lg:p-0">
           <div className="p-10 space-y-3 rounded-md bg-white">
-            <h1 className="text-xl font-serif font-extrabold">
+            <h1 className="text-xs lg:text-xl font-serif font-extrabold">
               <span className="text-indigo-500">Your name:</span> {users.name}
             </h1>
-            <h1 className="text-xl font-serif font-extrabold">
+            <h1 className="text-xs lg:text-xl font-serif font-extrabold">
               <span className="text-indigo-500">Father name:</span> {users.father}
             </h1>
-            <h1 className="text-xl font-serif font-extrabold">
+            <h1 className="text-xs lg:text-xl font-serif font-extrabold">
               <span className="text-indigo-500">Mother name:</span> {users.mother}
             </h1>
           </div>
         </div>
-        <div className="w-[270px]">
+        <div className="w-[280px] lg:w-[270px] mx-2">
           <form onSubmit={handleUpdate}>
-            <p className="font-extrabold font-serif text-2xl mt-5">Update Information</p>
+            <p className="text-lg text-center lg:text-left md:text-lg lg:text-xl mt-5 information">Update your Information</p>
             <div className="mb-4 mt-3">
               <h1>Your name</h1>
               <input
@@ -90,8 +90,12 @@ const Update = () => {
                 required
               />
             </div>
-            <div className="text-center pt-1 mb-12 pb-1">
-              <button className="w-full p-1 rounded-sm text-white bg-slate-600 hover:bg-slate-700">Update Info</button>
+            <div className="flex justify-between space-x-2 text-center pt-1 mb-12 pb-1">
+              <button className="w-52 p-1 rounded-sm text-white bg-slate-600 hover:bg-slate-700">Update Info</button>
+
+              <a className="w-32 p-1 rounded-sm text-white bg-slate-600 hover:bg-slate-700" href="/user">
+                Go back
+              </a>
             </div>
           </form>
         </div>

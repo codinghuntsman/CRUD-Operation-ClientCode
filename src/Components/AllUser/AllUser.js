@@ -10,6 +10,7 @@ const AllUser = () => {
       .then((data) => setUsers(data));
   }, []);
 
+  // -----------DELETE-------------------
   const handleDelete = (id) => {
     const proceed = window.confirm("Are sure you want to delete this data");
     if (proceed) {
@@ -28,7 +29,7 @@ const AllUser = () => {
   };
 
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3 mx-10 bg-gray-200 p-5">
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3 lg:mx-10 bg-gray-200 p-5">
       {users.map((user) => (
         <User user={user} key={user._id} handleDelete={handleDelete}></User>
       ))}

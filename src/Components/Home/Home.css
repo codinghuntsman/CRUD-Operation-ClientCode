@@ -1,0 +1,71 @@
+@import url("https://fonts.googleapis.com/css2?family=Alkalami&family=Lato&family=Paytone+One&display=swap");
+
+.information {
+  font-family: "Paytone One", sans-serif;
+}
+.running {
+  width: 35px;
+  height: 35px;
+  background-color: red;
+  animation-name: bdFlag;
+  position: relative;
+  border-radius: 8px;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+}
+.customColor {
+  background-color: red;
+}
+@keyframes bdFlag {
+  0% {
+    left: 0px;
+    top: 0px;
+  }
+  25% {
+    background-color: #027902;
+    left: 570px;
+    top: 0px;
+  }
+  50% {
+    background-color: red;
+    left: 570px;
+    top: 280px;
+  }
+  75% {
+    background-color: #027902;
+    left: 0px;
+    top: 280px;
+  }
+  100% {
+    background-color: red;
+    left: 0px;
+    top: 0px;
+  }
+}
+@media only screen and (max-width: 600px) {
+  @keyframes bdFlag {
+    0% {
+      left: 0px;
+      top: 0px;
+    }
+    25% {
+      background-color: green;
+      left: 230px;
+      top: 0px;
+    }
+    50% {
+      background-color: red;
+      left: 230px;
+      top: 230px;
+    }
+    75% {
+      background-color: green;
+      left: 0px;
+      top: 230px;
+    }
+    100% {
+      left: 0px;
+      top: 0px;
+    }
+  }
+}

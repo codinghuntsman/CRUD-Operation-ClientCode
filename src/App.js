@@ -1,6 +1,7 @@
 import { Route, Routes } from "react-router-dom";
 import "./App.css";
 import AllUser from "./Components/AllUser/AllUser";
+import Comment from "./Components/Comment/Comment";
 import Home from "./Components/Home/Home";
 import Navbar from "./Components/Navbar/Navbar";
 import PostMethod from "./Components/PostMethod/PostMethod";
@@ -16,6 +17,7 @@ function App() {
         <Route path="/" element={<Home></Home>}></Route>
         <Route path="/post" element={<PostMethod></PostMethod>}></Route>
         <Route path="/user" element={<AllUser></AllUser>}></Route>
+        <Route path="/comment/:id" element={<Comment></Comment>}></Route>
         <Route path="/review" element={<Review></Review>}></Route>
         <Route path="/update/:id" element={<Update></Update>}></Route>
       </Routes>
