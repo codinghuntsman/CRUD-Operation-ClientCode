@@ -1,38 +1,47 @@
 // eslint-disable-next-line
 import React from "react";
 import image from "../../../src/images/my-img.png";
+import { signOut } from "firebase/auth";
+import { useAuthState } from "react-firebase-hooks/auth";
+import auth from "../../firebase.init";
 
 const Navbar = () => {
+  const [user, loading] = useAuthState(auth);
+
+  const logout = () => {
+    signOut(auth);
+  };
+
   return (
     <div>
       <nav
         className="
-  relative
-  w-full
-  flex flex-wrap
-  items-center
-  justify-between
-  py-4
-  bg-gray-100
-  text-gray-500
-  hover:text-gray-700
-  focus:text-gray-700
-  shadow-lg
-  navbar navbar-expand-lg navbar-light
-  "
+        relative
+        w-full
+        flex flex-wrap
+        items-center
+        justify-between
+        py-4
+        bg-gray-100
+        text-gray-500
+        hover:text-gray-700
+        focus:text-gray-700
+        shadow-lg
+        navbar navbar-expand-lg navbar-light
+        "
       >
         <div className="container-fluid w-full flex flex-wrap items-center justify-between px-6">
           <button
             className="
-      navbar-toggler
-      text-gray-500
-      border-0
-      hover:shadow-none hover:no-underline
-      py-2
-      px-2.5
-      bg-transparent
-      focus:outline-none focus:ring-0 focus:shadow-none focus:no-underline
-    "
+            navbar-toggler
+            text-gray-500
+            border-0
+            hover:shadow-none hover:no-underline
+            py-2
+            px-2.5
+            bg-transparent
+            focus:outline-none focus:ring-0 focus:shadow-none focus:no-underline
+            "
             type="button"
             data-bs-toggle="collapse"
             data-bs-target="#navbarSupportedContent"
@@ -50,15 +59,15 @@ const Navbar = () => {
           <div className="collapse navbar-collapse flex-grow items-center" id="navbarSupportedContent">
             <a
               className="
-        flex
-        items-center
-        text-gray-900
-        hover:text-gray-900
-        focus:text-gray-900
-        mt-2
-        lg:mt-0
-        mr-1
-      "
+              flex
+              items-center
+              text-gray-900
+              hover:text-gray-900
+              focus:text-gray-900
+              mt-2
+              lg:mt-0
+              mr-1
+              "
               href="/#"
             >
               <h1 className="font-bold tracking-wider text-indigo-500 text-xl information">CRUD</h1>
@@ -76,111 +85,32 @@ const Navbar = () => {
               </li>
               <li className="nav-item p-2">
                 <a className="nav-link text-gray-500 hover:text-gray-700 focus:text-gray-700 p-0 information" href="/user">
-                  All Student
+                  Students
                 </a>
               </li>
               <li className="nav-item p-2">
                 <a className="nav-link text-gray-500 hover:text-gray-700 focus:text-gray-700 p-0 information" href="/review">
-                  All comment
+                  Comments
                 </a>
               </li>
             </ul>
           </div>
 
           <div className="flex items-center relative">
-            <a className="mr-5 information" href="/#">
-              Contact
-            </a>
+            <button className="pr-5 font-serif">{user?.displayName && user?.displayName}</button>
+            {user?.uid ? (
+              <button className="information" onClick={logout}>
+                Logout
+              </button>
+            ) : (
+              <a className="mr-5 information" href="/login">
+                Login
+              </a>
+            )}
             <div className="dropdown relative">
               <a className="dropdown-toggle flex items-center hidden-arrow" href="/#" id="dropdownMenuButton2" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                 <img src={image} className="rounded-full" style={{ height: 25, widows: 25 }} alt="me" loading="lazy" />
               </a>
-              <ul
-                className="
-    dropdown-menu
-    min-w-max
-    absolute
-    hidden
-    bg-white
-    text-base
-    z-50
-    float-left
-    py-2
-    list-none
-    text-left
-    rounded-lg
-    shadow-lg
-    mt-1
-    hidden
-    m-0
-    bg-clip-padding
-    border-none
-    left-auto
-    right-0
-  "
-                aria-labelledby="dropdownMenuButton2"
-              >
-                <li>
-                  <a
-                    className="
-        dropdown-item
-        text-sm
-        py-2
-        px-4
-        font-normal
-        block
-        w-full
-        whitespace-nowrap
-        bg-transparent
-        text-gray-700
-        hover:bg-gray-100
-      "
-                    href="/#"
-                  >
-                    Action
-                  </a>
-                </li>
-                <li>
-                  <a
-                    className="
-        dropdown-item
-        text-sm
-        py-2
-        px-4
-        font-normal
-        block
-        w-full
-        whitespace-nowrap
-        bg-transparent
-        text-gray-700
-        hover:bg-gray-100
-      "
-                    href="/#"
-                  >
-                    Another action
-                  </a>
-                </li>
-                <li>
-                  <a
-                    className="
-        dropdown-item
-        text-sm
-        py-2
-        px-4
-        font-normal
-        block
-        w-full
-        whitespace-nowrap
-        bg-transparent
-        text-gray-700
-        hover:bg-gray-100
-      "
-                    href="/#"
-                  >
-                    Something else here
-                  </a>
-                </li>
-              </ul>
             </div>
           </div>
         </div>

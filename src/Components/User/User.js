@@ -18,14 +18,15 @@ const User = ({ user, handleDelete }) => {
           </p>
           <div className="flex justify-between pt-4">
             {/* -----------There are three button is here, Update--Comment--Delete -----------*/}
-            <a href={`/update/${user._id}`} className="bg-gray-500 p-1 px-2 text-xs md:text-sm lg:text-sm rounded-sm text-white hover:text-green-500 transition duration-300 ease-in-out">
+            <a href={`/update/${user._id}`} className="bg-orange-400 text-white hover:bg-orange-500  p-1 px-2 text-xs md:text-sm lg:text-sm rounded-sm transition duration-200 ease-in-out">
               Edit
             </a>
-            <a href={`/comment/${user._id}`} className="bg-gray-500 p-1 px-2 text-xs md:text-sm lg:text-sm rounded-sm text-white hover:text-green-500 transition duration-300 ease-in-out">
+            <a href={`/comment/${user._id}`} className="bg-orange-400 text-white hover:bg-orange-500 p-1 px-2 text-xs md:text-sm lg:text-sm rounded-sm transition duration-200 ease-in-out">
               Comment
             </a>
             <button
-              className="bg-gray-500 p-1 px-2 text-xs md:text-sm lg:text-sm rounded-sm text-white hover:text-red-400 transition duration-300 ease-in-out"
+              className=" bg-red-400
+              text-white hover:bg-red-500 p-1 px-2 text-xs md:text-sm lg:text-sm rounded-sm transition duration-200 ease-in-out"
               onClick={() => handleDelete(user._id)}
               type="button"
               title="Once you delete this info cannot undo again !!"

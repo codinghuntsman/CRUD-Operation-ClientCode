@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 
 const Update = () => {
   const { id } = useParams();
+  const navigate = useNavigate();
 
   const [users, setUsers] = useState({});
   useEffect(() => {
@@ -35,6 +36,7 @@ const Update = () => {
         },
         body: JSON.stringify(user),
       });
+      navigate("/user");
     }
   };
 
@@ -56,7 +58,10 @@ const Update = () => {
         </div>
         <div className="w-[280px] lg:w-[270px] mx-2">
           <form onSubmit={handleUpdate}>
-            <p className="text-lg text-center lg:text-left md:text-lg lg:text-xl mt-5 information">Update your Information</p>
+            <p className="text-lg text-center lg:text-left md:text-lg lg:text-xl mt-5 information">
+              <span className="text-orange-500">Update your</span>
+              <span className="text-indigo-500"> Information</span>
+            </p>
             <div className="mb-4 mt-3">
               <h1>Your name</h1>
               <input
@@ -91,9 +96,9 @@ const Update = () => {
               />
             </div>
             <div className="flex justify-between space-x-2 text-center pt-1 mb-12 pb-1">
-              <button className="w-52 p-1 rounded-sm text-white bg-slate-600 hover:bg-slate-700">Update Info</button>
+              <button className="w-52 p-1 rounded-sm bg-orange-400 text-white hover:bg-orange-500 animation duration-200 ease-in-out">Update Info</button>
 
-              <a className="w-32 p-1 rounded-sm text-white bg-slate-600 hover:bg-slate-700" href="/user">
+              <a className="w-32 p-1 rounded-sm bg-orange-400 text-white hover:bg-orange-500 animation duration-200 ease-in-out" href="/user">
                 Go back
               </a>
             </div>

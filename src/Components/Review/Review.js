@@ -27,7 +27,7 @@ const Review = () => {
     }
   };
   return (
-    <div className="bg-gray-300 pt-3">
+    <div className="bg-gray-300 pt-2">
       <div className="grid gap-3 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 mx-2 lg:mx-8">
         {user.map((u) => (
           <ChildReview key={u._id} user={u} handleDelete={handleDelete}></ChildReview>

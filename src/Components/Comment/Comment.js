@@ -1,10 +1,11 @@
 import React, { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import { FcPortraitMode } from "react-icons/fc";
 
 const Comment = () => {
   const { id } = useParams();
   const [user, setUser] = useState([]);
+  const navigate = useNavigate();
   useEffect(() => {
     fetch(`http://localhost:5000/user/${id}`)
       .then((res) => res.json())
@@ -15,6 +16,7 @@ const Comment = () => {
     const message = event?.target?.message?.value;
     const name = event?.target?.name?.value;
     const user = { message, name };
+    event.target.reset();
     const url = "http://localhost:5000/comment";
     fetch(url, {
       method: "POST",
@@ -23,8 +25,7 @@ const Comment = () => {
       },
       body: JSON.stringify(user),
     });
-    event.target.reset();
-    console.log(user);
+    navigate("/review");
   };
   return (
     <div>
@@ -52,8 +53,8 @@ const Comment = () => {
                 required
               ></textarea>
               <div className="flex justify-between space-x-2 mt-2">
-                <button className="w-40 font-bold p-1 text-white rounded-sm bg-slate-600 hover:bg-slate-700">Send</button>
-                <a className="w-28 rounded-sm text-white font-bold text-center p-1 bg-slate-600 hover:bg-slate-700" href="/user">
+                <button className="w-40 font-bold p-1 rounded-sm bg-orange-400 text-white hover:bg-orange-500 animation duration-200 ease-in-out">Send</button>
+                <a className="w-28 rounded-sm font-bold text-center p-1 bg-orange-400 text-white hover:bg-orange-500 animation duration-200 ease-in-out" href="/user">
                   Go back
                 </a>
               </div>

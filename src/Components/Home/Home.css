@@ -9,7 +9,7 @@
   background-color: red;
   animation-name: bdFlag;
   position: relative;
-  border-radius: 8px;
+  border-radius: 2px;
   animation-duration: 5s;
   animation-iteration-count: infinite;
 }
