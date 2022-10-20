@@ -12,6 +12,7 @@ CRUD Operation with student inforomation
 5. Animation has been implemented on the home page.
 6. Tailwind CSS has been used in this project.
 7. Raw CSS has been used for Animation.
+8. Environment variable completed.
 ```
 
 ## Installation
