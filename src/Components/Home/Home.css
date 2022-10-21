@@ -9,6 +9,7 @@
   background-color: red;
   animation-name: bdFlag;
   position: relative;
+  overflow: hidden;
   border-radius: 2px;
   animation-duration: 5s;
   animation-iteration-count: infinite;
@@ -69,3 +70,6 @@
     }
   }
 }
+/* .no-scroll::-webkit-scrollbar {
+  display: none;
+} */

@@ -2,7 +2,7 @@ import { Route, Routes } from "react-router-dom";
 import "./App.css";
 import AllUser from "./Components/AllUser/AllUser";
 import Comment from "./Components/Comment/Comment";
-import Home from "./Components/Home/Home";
+import HomeSection from "./Components/HomeSection/HomeSection";
 import Login from "./Components/Login/Login";
 import Navbar from "./Components/Navbar/Navbar";
 import PostMethod from "./Components/PostMethod/PostMethod";
@@ -13,11 +13,10 @@ import Update from "./Components/Update/Update";
 
 function App() {
   return (
-    <div className="">
+    <div>
       <Navbar></Navbar>
-
       <Routes>
-        <Route path="/" element={<Home></Home>}></Route>
+        <Route path="/" element={<HomeSection></HomeSection>}></Route>
         <Route
           path="/post"
           element={
