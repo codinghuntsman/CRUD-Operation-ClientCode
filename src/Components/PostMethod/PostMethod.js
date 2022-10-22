@@ -4,6 +4,7 @@ import image from "../../../src/images/wave.svg";
 
 const PostMethod = () => {
   const navigate = useNavigate();
+
   const handleFormSubmit = (event) => {
     event.preventDefault();
     const name = event?.target?.name?.value;
@@ -16,7 +17,7 @@ const PostMethod = () => {
     };
     event.target.reset();
 
-    const confirmInsert = window.confirm("Do you want to insert your data !");
+    const confirmInsert = window.confirm("Do you want to insert this information ??");
     if (confirmInsert) {
       fetch("http://localhost:5000/user", {
         method: "POST",
@@ -111,6 +112,7 @@ const PostMethod = () => {
           </div>
           <div className="pt-3">
             <button
+              // onClick={() => setOpenModal(true)}
               type="submit"
               className="
               flex

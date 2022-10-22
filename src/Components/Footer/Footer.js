@@ -1,6 +1,7 @@
 import React from "react";
 import { FaFacebookSquare, FaGithub } from "react-icons/fa";
 import { AiFillLinkedin } from "react-icons/ai";
+import { BsStackOverflow } from "react-icons/bs";
 
 const Footer = () => {
   return (
@@ -52,9 +53,9 @@ const Footer = () => {
         </div>
         <div className="md:place-self-center md:justify-self-end">
           <div className="flex">
-            <a href="https://www.facebook.com/mdshajedul.islam" target="_blank" rel="noreferrer">
+            <a href="https://stackoverflow.com/users/18383895/md-sajedul-islam?tab=profile" target="_blank" rel="noreferrer">
               <span className="text-xl lg:text-4xl">
-                <FaFacebookSquare />
+                <BsStackOverflow />
               </span>
             </a>
             <a href="https://www.linkedin.com/in/md-sajedul-islam-a4b073241/" target="_blank" rel="noreferrer">
@@ -65,6 +66,11 @@ const Footer = () => {
             <a href="https://github.com/codinghuntsman?tab=repositories" target="_blank" rel="noreferrer">
               <span className="text-xl lg:text-4xl">
                 <FaGithub />
+              </span>
+            </a>
+            <a href="https://www.facebook.com/mdshajedul.islam" target="_blank" rel="noreferrer">
+              <span className="text-xl lg:text-4xl">
+                <FaFacebookSquare />
               </span>
             </a>
           </div>
