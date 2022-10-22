@@ -17,7 +17,7 @@ const StudentDescription = () => {
           </div>
           <div className="flex justify-center items-center">
             <div className="w-[550px]">
-              <p className="text-justify font-serif font-bold text-gray-700 text-sm lg:text-base">
+              <p className="text-justify font-serif font-bold text-gray-700 text-sm lg:text-base whitespace-normal">
                 Lisa Delpit says that children come to school with different kinds of knowledge and different strengths to build on. What we tend to think of as basic skills, such as knowledge of
                 letter names or recognition of numerals, are inherent in the upbringing of middle class kids. They may not be basic to children from non-mainstream or non-middle class backgrounds. She
                 describes her experience when, in her early years of teaching, one of her first graders was judged to be “failing” in math, unable to calculate a total amount of money represented by

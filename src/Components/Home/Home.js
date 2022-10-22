@@ -1,5 +1,8 @@
 import React from "react";
 import "./Home.css";
+import { FaFacebookSquare, FaGithub } from "react-icons/fa";
+import { AiFillLinkedin } from "react-icons/ai";
+import { BsStackOverflow } from "react-icons/bs";
 import image from "../../../src/images/Student-Services.png";
 
 const Home = () => {
@@ -26,6 +29,30 @@ const Home = () => {
           </div>
         </div>
         <h1 className="text-xs lg:text-xl information text-indigo-600">The frontend design is easiest for me</h1>
+      </div>
+      <div className="flex justify-center items-center bg-base-200 border-t border-base-300 mt-[80px] lg:mt-[100px]">
+        <div className="flex space-x-3 mt-2 lg:mt-2">
+          <a href="https://stackoverflow.com/users/18383895/md-sajedul-islam?tab=profile" target="_blank" rel="noreferrer">
+            <span className="text-xl lg:text-4xl text-orange-600  hover:text-green-600 animation duration-150 ease-in-out">
+              <BsStackOverflow />
+            </span>
+          </a>
+          <a href="https://www.linkedin.com/in/md-sajedul-islam-a4b073241/" target="_blank" rel="noreferrer">
+            <span className="text-xl lg:text-4xl text-orange-600  hover:text-green-600 animation duration-150 ease-in-out">
+              <AiFillLinkedin />
+            </span>
+          </a>
+          <a href="https://github.com/codinghuntsman?tab=repositories" target="_blank" rel="noreferrer">
+            <span className="text-xl lg:text-4xl text-orange-600  hover:text-green-600 animation duration-150 ease-in-out">
+              <FaGithub />
+            </span>
+          </a>
+          <a href="https://www.facebook.com/mdshajedul.islam" target="_blank" rel="noreferrer">
+            <span className="text-xl lg:text-4xl text-orange-600 hover:text-green-600 animation duration-150 ease-in-out">
+              <FaFacebookSquare />
+            </span>
+          </a>
+        </div>
       </div>
     </div>
   );
