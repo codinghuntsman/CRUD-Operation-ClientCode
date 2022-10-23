@@ -4,16 +4,18 @@ CRUD Operation with student inforomation
 
 ## Project Overview
 
-```bash
-1. This is a CRUD operation simple website.
-2. I have implemented some interaction with CRUD method.
-3. You can Create, Read, Update and Delete information.
-4. ReactJs has been used in this project.
-5. Animation has been implemented on the home page.
-6. Tailwind CSS has been used in this project.
-7. Raw CSS has been used for Animation.
-8. Environment variable completed.
-```
+<li>This is a CRUD operation simple website.</li>
+<li>I have implemented some interaction with CRUD method.</li>
+<li>You can Create, Read, Update and Delete information.</li>
+<li>ReactJs has been used in this project.</li>
+<li>Animation has been implemented on the home page.</li>
+<li>Tailwind CSS has been used in this project.</li>
+<li>Raw CSS has been used for Animation.</li>
+<li>Environment variable completed.</li>
+
+## Responsiveness
+
+<li>This website has been responsive only Mobile and Desktop</li>
 
 ## Installation
 
@@ -25,6 +27,7 @@ To run this project I have installed following package
   3. Tailwind css
   4. mongoDB, NodeJS, ExpressJS, cors
   5. Environment variable
+  6. 'dot' gitignore
 ```
 
 ## Environment Variables
@@ -34,4 +37,4 @@ I have used .ENV directory
 ## Contributing
 
 Contributions are always welcome!
-But Not Contributions anyone in this project.
+But was not Contributions anyone in this project.

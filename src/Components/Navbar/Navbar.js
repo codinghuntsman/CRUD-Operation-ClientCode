@@ -6,7 +6,7 @@ import { useAuthState } from "react-firebase-hooks/auth";
 import auth from "../../firebase.init";
 
 const Navbar = () => {
-  const [user, loading] = useAuthState(auth);
+  const [user] = useAuthState(auth);
 
   const logout = () => {
     signOut(auth);
@@ -57,7 +57,7 @@ const Navbar = () => {
               ></path>
             </svg>
           </button>
-          <div className="collapse navbar-collapse flex-grow items-center" id="navbarSupportedContent">
+          <div className="collapse navbar-collapse flex-grow items-center p-3 pb-6 lg:pb-0 lg:p-0 rounded-md bg-orange-200 lg:bg-gray-100 overflow-hidden" id="navbarSupportedContent">
             <a
               className="
               flex
@@ -69,11 +69,11 @@ const Navbar = () => {
               lg:mt-0
               mr-1
               "
-              href="/#"
+              href="/go"
             >
               <h1 className="font-bold tracking-wider text-indigo-500 text-xl information">CRUD</h1>
             </a>
-            <ul className="navbar-nav flex flex-col pl-0 list-style-none mr-auto">
+            <ul className="navbar-nav flex flex-col pl-0 mr-auto">
               <li className="nav-item p-2">
                 <a className="nav-link text-gray-500 hover:text-gray-700 underline hover:underline-offset-4 hover:decoration-4 focus:text-gray-700 p-0 information" href="/">
                   Home
@@ -96,8 +96,7 @@ const Navbar = () => {
               </li>
             </ul>
           </div>
-
-          <div className="flex items-center relative">
+          <div className="flex items-center relative pl-3 lg:p-0">
             <button className="pr-5 font-serif">{user?.displayName && user?.displayName}</button>
             {user?.uid ? (
               <button className="information" onClick={logout}>

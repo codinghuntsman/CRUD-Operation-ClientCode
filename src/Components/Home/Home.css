@@ -51,21 +51,21 @@
     }
     25% {
       background-color: green;
-      left: 230px;
+      left: 243px;
       top: 0px;
     }
     50% {
       background-color: red;
-      left: 230px;
-      top: 230px;
+      left: 243px;
+      top: 210px;
     }
     75% {
       background-color: green;
-      left: 0px;
-      top: 230px;
+      left: -15px;
+      top: 210px;
     }
     100% {
-      left: 0px;
+      left: -15px;
       top: 0px;
     }
   }
