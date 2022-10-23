@@ -31,7 +31,7 @@ const Home = () => {
         <h1 className="text-xs lg:text-xl information text-indigo-600">The frontend design is easiest for me</h1>
       </div>
       <div className="flex justify-center items-center bg-base-200 border-t border-base-300 mt-[80px] lg:mt-[100px]">
-        <div className="flex space-x-3 mt-2 lg:mt-2">
+        <div className="flex space-x-3 mt-4 lg:mt-2">
           <a href="https://stackoverflow.com/users/18383895/md-sajedul-islam?tab=profile" target="_blank" rel="noreferrer">
             <span className="text-xl lg:text-4xl text-orange-600  hover:text-green-600 animation duration-150 ease-in-out">
               <BsStackOverflow />
