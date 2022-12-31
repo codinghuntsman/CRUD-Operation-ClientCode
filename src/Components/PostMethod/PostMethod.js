@@ -19,7 +19,7 @@ const PostMethod = () => {
 
     const confirmInsert = window.confirm("Do you want to insert this information ??");
     if (confirmInsert) {
-      fetch(`${REACT_APP_SECRECT_SERVER_SIDE}/user`, {
+      fetch(`${process.env.REACT_APP_SECRECT_SERVER_SIDE}/user`, {
         method: "POST",
         headers: {
           "content-type": "application/json",
