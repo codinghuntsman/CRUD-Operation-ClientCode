@@ -7,7 +7,7 @@ const Update = () => {
 
   const [users, setUsers] = useState({});
   useEffect(() => {
-    const url = `http://localhost:5000/user/${id}`;
+    const url = `${process.env.REACT_APP_SECRECT_SERVER_SIDE}/user/${id}`;
     fetch(url)
       .then((res) => res.json())
       .then((data) => setUsers(data));
@@ -28,7 +28,7 @@ const Update = () => {
 
     const confirmInsert = window.confirm("Do you want to Update your data !");
     if (confirmInsert) {
-      const url = `http://localhost:5000/user/${id}`;
+      const url = `${process.env.REACT_APP_SECRECT_SERVER_SIDE}/user/${id}`;
       fetch(url, {
         method: "PUT",
         headers: {

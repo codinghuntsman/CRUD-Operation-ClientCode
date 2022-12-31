@@ -4,7 +4,7 @@ import ChildReview from "../ChildReview/ChildReview";
 const Review = () => {
   const [user, setUser] = useState([]);
   useEffect(() => {
-    const url = "http://localhost:5000/comment";
+    const url = `${process.env.REACT_APP_SECRECT_SERVER_SIDE}/comment`;
     fetch(url)
       .then((res) => res.json())
       .then((data) => setUser(data));
@@ -13,7 +13,7 @@ const Review = () => {
   const handleDelete = (id) => {
     const proceed = window.confirm("Do you want to delete this comment?");
     if (proceed) {
-      const url = `http://localhost:5000/comment/${id}`;
+      const url = `${process.env.REACT_APP_SECRECT_SERVER_SIDE}/comment/${id}`;
       fetch(url, {
         method: "DELETE",
       })

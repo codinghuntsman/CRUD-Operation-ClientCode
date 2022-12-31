@@ -7,7 +7,7 @@ const Comment = () => {
   const [user, setUser] = useState([]);
   const navigate = useNavigate();
   useEffect(() => {
-    fetch(`http://localhost:5000/user/${id}`)
+    fetch(`${process.env.REACT_APP_SECRECT_SERVER_SIDE}/user/${id}`)
       .then((res) => res.json())
       .then((data) => setUser(data));
   }, [id]);
@@ -17,7 +17,7 @@ const Comment = () => {
     const name = event?.target?.name?.value;
     const user = { message, name };
     event.target.reset();
-    const url = "http://localhost:5000/comment";
+    const url = `${process.env.REACT_APP_SECRECT_SERVER_SIDE}/comment`;
     fetch(url, {
       method: "POST",
       headers: {

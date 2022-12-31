@@ -4,7 +4,7 @@ import User from "../User/User";
 const AllUser = () => {
   const [users, setUsers] = useState([]);
   useEffect(() => {
-    const url = "http://localhost:5000/user";
+    const url = `${process.env.REACT_APP_SECRECT_SERVER_SIDE}/user`;
     fetch(url)
       .then((res) => res.json())
       .then((data) => setUsers(data));
@@ -14,7 +14,7 @@ const AllUser = () => {
   const handleDelete = (id) => {
     const proceed = window.confirm("Are sure you want to delete this data");
     if (proceed) {
-      const url = `http://localhost:5000/user/${id}`;
+      const url = `${process.env.REACT_APP_SECRECT_SERVER_SIDE}/user/${id}`;
       fetch(url, {
         method: "DELETE",
       })
